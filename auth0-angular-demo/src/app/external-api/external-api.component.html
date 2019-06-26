@@ -1,0 +1,12 @@
+<div>
+  <button (click)="pingApi()">Ping API</button>
+
+  <div>
+    <div [ngClass]="{ show: hasResponse }">
+      <h6 class="muted">Result</h6>
+      <pre>
+        <code>{{ responseJson }}</code>
+      </pre>
+    </div>
+  </div>
+</div>

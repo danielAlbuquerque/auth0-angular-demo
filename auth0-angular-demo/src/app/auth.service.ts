@@ -14,8 +14,9 @@ export class AuthService {
 
   // Auth0 application configuration
   config = {
-    domain: "vib-positiva",
-    client_id: "48BR6ckZ7C9_ZI-ryQvL7CfGLT4_2exV"
+    domain: 'portal-cotacao.auth0.com',
+    client_id: 'rZPbW3hFMfh5druYlFILK97YAxgX1h91',
+    audience: 'http://localhost:5000'
   };
 
   /**

@@ -1,4 +1,8 @@
 <header>
   <button (click)="login()" *ngIf="!isAuthenticated">Log In</button>
   <button (click)="logout()" *ngIf="isAuthenticated">Log Out</button>
+
+  <a [routerLink]="['']">Home</a>&nbsp;
+  <a [routerLink]="['profile']" *ngIf="isAuthenticated">Profile</a>
+  <a [routerLink]="['external-api']" *ngIf="isAuthenticated">External API</a>
 </header>

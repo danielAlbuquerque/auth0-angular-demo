@@ -22,8 +22,12 @@ export class NavbarComponent implements OnInit {
    * Handle component initialization
    */
   async ngOnInit() {
+    try {
+      this.auth0Client = await this.authService.getAuth0Client();
+    } catch(ex) {
+      console.log(ex);
+    }
     // Get an instance of the Auth0 client
-    this.auth0Client = await this.authService.getAuth0Client();
 
     // Watch for changes to the isAuthenticated state
     this.authService.isAuthenticated.subscribe(value => {
